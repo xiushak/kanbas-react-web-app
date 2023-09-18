@@ -37,25 +37,29 @@
         </ul>
       </td>
       <td>
-        <select id="gradebook">
-          <option selected value="GRADEBOOK">Gradebook</option>
-        </select>
-        <button>Import</button>
-        <select id="export">
-          <option selected value="EXPORT">Export</option>
-        </select>
-        <button>Configure</button>
+        <div>
+          <select id="gradebook">
+            <option selected value="GRADEBOOK">Gradebook</option>
+          </select>
+          <button>Import</button>
+          <select id="export">
+            <option selected value="EXPORT">Export</option>
+          </select>
+          <button>Configure</button>
+        </div>
+        <div>
+          <h3>Student Names</h3>
+          <input id="search-student" placeholder="Search Students" />
+        </div>
+        <div>
+          <h3>Assignment Names</h3>
+          <input id="search-assignment" placeholder="Search Assignments" />
+        </div>
         <br />
-        <h3>Student Names</h3>
-        <input id="search-student" placeholder="Search Students" />
+        <div>
+          <button>Apply Filters</button>
+        </div>
         <br />
-        <h3>Assignment Names</h3>
-        <input id="search-assignment" placeholder="Search Assignments" />
-        <br />
-        <br />
-        <button>Apply Filters</button>
-        <br />
-
         <table border="1">
           <tbody align="middle">
             <tr>
@@ -66,30 +70,28 @@
               <th>assignment 4</th>
             </tr>
             <tr>
-              <td>Victor Louie</td>
+              <td>Vinco Loosey</td>
               <td>90</td>
               <td>92</td>
               <td>97</td>
               <td>86</td>
             </tr>
             <tr>
-              <td>Andrew Li</td>
+              <td>Angular L</td>
               <td>83</td>
               <td>74</td>
               <td>
-                <center>
-                  <input
-                    size="3"
-                    type="text"
-                    id="andrew-assignment-3"
-                    value="94"
-                  />
-                </center>
+                <input
+                  size="3"
+                  type="text"
+                  id="angular-assignment-3"
+                  value="94"
+                />
               </td>
               <td>30</td>
             </tr>
             <tr>
-              <td>Anna Ji</td>
+              <td>Banana Chicken</td>
               <td>30</td>
               <td>57</td>
               <td>24</td>
@@ -97,7 +99,9 @@
             </tr>
             <tr>
               <td>Joseph Aoun</td>
-              <td>100</td>
+              <td>
+                <input size="3" type="text" id="aoun-assignment-3" value="99" />
+              </td>
               <td>100</td>
               <td>100</td>
               <td>100</td>
