@@ -11,6 +11,7 @@ h2 {
   margin-bottom: 0;
 }
 .wd-card-container {
+  max-width: 1200px;
   gap: 30px;
 }
 .wd-card {
