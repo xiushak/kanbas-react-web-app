@@ -1,0 +1,61 @@
+.wd-screen {
+  display:flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* navigation sidebar styles */
+.wd-navigation-sidebar {
+  background-color: black;
+  width: 85px;
+  height: 100%;
+  position: static;
+}
+.wd-navigation-sidebar-list {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+}
+.wd-navigation-sidebar-list li {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.wd-navigation-sidebar-list i {
+  color: rgb(209, 0, 0);
+  font-size: 1.5rem;
+}
+.wd-navigation-sidebar-list p {
+  color: white;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+.wd-navigation-sidebar-list a {
+  display: block;
+}
+.wd-navigation-sidebar-list a:hover {
+  color: white;
+  text-decoration: none;
+}
+.wd-navigation-sidebar-list a:visited {
+  color: white;
+}
+/* navigation sidebar selected item */
+.wd-navigation-sidebar-list-selected {
+  background-color: white;
+  color: rgb(209, 0, 0);
+}
+.wd-navigation-sidebar-list-selected p {
+  /* text-decoration: none; */
+  color: rgb(209, 0, 0);
+}
+.wd-navigation-sidebar-list-selected a:hover {
+  color: rgb(209, 0, 0);
+  text-decoration: none;
+}
