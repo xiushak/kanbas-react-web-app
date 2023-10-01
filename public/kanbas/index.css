@@ -125,3 +125,20 @@ a:visited {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.wd-breadcrumb {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.wd-pill {
+  color: black;
+  font-size: 0.8rem;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 1rem;
+  border: 1px solid rgba(0,0,0,.25);
+  box-shadow: 0 1px 0 #fff;
+}
+.wd-align-items-center {
+  display: flex;
+  align-items: center;
+}

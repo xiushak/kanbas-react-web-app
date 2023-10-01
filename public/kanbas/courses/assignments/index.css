@@ -1,0 +1,7 @@
+.wd-list {
+  font-weight: 500;
+  margin-bottom: 36px;
+}
+.wd-list li {
+  border-left: 4px solid green;
+}
