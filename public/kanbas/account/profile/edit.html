@@ -13,7 +13,7 @@
   <link href="index.css" rel="stylesheet" />
 </head>
 <div class="wd-screen">
-  <div class="col-auto" style="padding: 0">
+  <div class="col-auto p-0">
     <div class="wd-navigation-sidebar">
       <ul class="wd-navigation-sidebar-list text-white">
         <li>
@@ -29,13 +29,13 @@
           </a>
         </li>
         <li>
-          <a href="../../index.html">
+          <a href="../../dashboard/index.html">
             <i class="fa-solid fa-gauge"></i>
             <p>Dashboard</p></a
           >
         </li>
         <li>
-          <a href="../../courses/index.html">
+          <a href="../../courses/home/home.html">
             <i class="fa-solid fa-book"></i>
             <p>Courses</p></a
           >
@@ -81,7 +81,7 @@
   </div>
   <div class="col" style="margin: 24px">
     <div style="padding-left: 10px">
-      <i class="fa-solid fa-bars fa-xl" style="color: rgb(209, 0, 0)"></i>
+      <i class="fa-solid fa-bars fa-xl wd-red"></i>
       <span style="padding-left: 20px"> Jose Annunziato's Profie </span>
     </div>
     <hr />
@@ -105,10 +105,7 @@
           </div>
         </div>
         <div class="col">
-          <div
-            class="container-fluid"
-            style="padding: 0px !important; min-width: 270px"
-          >
+          <div class="container-fluid p-0" style="min-width: 270px">
             <div class="row">
               <div class="col-auto">
                 <span class="fa-stack fa-2x" style="font-size: 4rem">
@@ -132,7 +129,11 @@
                     value="Jose Annunziato"
                   />
                   <label for="pronoun-edit"> <h4>Pronouns:</h4></label>
-                  <select class="form-select mb-2 w-50" id="pronoun-edit">
+                  <select
+                    class="form-select mb-2"
+                    id="pronoun-edit"
+                    style="width: 200px"
+                  >
                     <option selected value="he-him">He/Him</option>
                     <option value="she-her">She/Her</option>
                   </select>
@@ -214,7 +215,7 @@ Faculty, Software Engineering, AI, Space, and renewables enthusiast.</textarea
         </div>
         <div class="col-auto" style="padding-left: 24px; padding-right: 24px">
           <form action="index.html">
-            <button class="btn btn-secondary" type="submit">
+            <button class="btn btn-secondary float-end" type="submit">
               <i class="fa-solid fa-pencil fa-flip-horizontal"></i> Cancel
               Editing
             </button>

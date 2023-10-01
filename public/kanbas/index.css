@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
 .wd-navigation-sidebar {
   background-color: black;
   width: 85px;
-  height: 100%;
+  min-height: 100%;
   position: static;
 }
 .wd-navigation-sidebar-list {
@@ -38,8 +38,6 @@
 }
 .wd-navigation-sidebar-list a {
   display: block;
-  color: white;
-  text-decoration: none;
 }
 /* navigation sidebar selected item */
 .wd-navigation-sidebar-list-selected {
@@ -51,9 +49,10 @@
 
 /* navigation sub-bar styles */
 .wd-navigation-subbar {
-  width: 200px;
-  height: 100%;
+  width: 180px;
+  min-height: 100%;
   position: static;
+  margin-right: 20px;
 }
 .wd-navigation-subbar-list {
   width: 100%;
@@ -67,8 +66,7 @@
   padding-left: 10px;
 }
 .wd-navigation-subbar-list a {
-  color: rgb(209, 0, 0);
-  text-decoration: none !important;
+  color: rgb(209, 0, 0) !important;
 }
 /* navigation subbar selected item */
 .wd-navigation-subbar-list-selected {
@@ -77,6 +75,10 @@
 }
 .wd-navigation-subbar-list-selected a {
   color: black !important;
+}
+.wd-navigation-subbar h6 {
+  color: black;
+  font-size: 0.8rem;
 }
 /* primary + secondary button styles */
 .btn-primary {
@@ -108,4 +110,18 @@
 .form-select:focus {
   border-color: rgb(209, 0, 0);
   box-shadow: none;
+}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.wd-red {
+  color: rgb(209, 0, 0);
+}
+.wd-truncate-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
