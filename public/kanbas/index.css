@@ -1,3 +1,28 @@
+.wd-red {
+  color: rgb(209, 0, 0) !important;
+}
+.wd-truncate-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wd-breadcrumb {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.wd-pill {
+  color: black;
+  font-size: 0.8rem;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 #fff;
+}
+.wd-align-items-center {
+  display: flex;
+  align-items: center;
+}
 .wd-screen {
   display: flex;
   flex-wrap: nowrap;
@@ -6,6 +31,22 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* overriden styles */
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.form-control:focus {
+  border-color: rgb(209, 0, 0);
+  box-shadow: none;
+}
+.form-select:focus {
+  border-color: rgb(209, 0, 0);
+  box-shadow: none;
 }
 
 /* navigation sidebar styles */
@@ -68,6 +109,10 @@
 .wd-navigation-subbar-list a {
   color: rgb(209, 0, 0) !important;
 }
+.wd-navigation-subbar h6 {
+  color: black;
+  font-size: 0.8rem;
+}
 /* navigation subbar selected item */
 .wd-navigation-subbar-list-selected {
   border-left: 2px solid black !important;
@@ -76,10 +121,7 @@
 .wd-navigation-subbar-list-selected a {
   color: black !important;
 }
-.wd-navigation-subbar h6 {
-  color: black;
-  font-size: 0.8rem;
-}
+
 /* primary + secondary button styles */
 .btn-primary {
   background: rgb(209, 0, 0);
@@ -93,52 +135,13 @@
 }
 .btn-secondary {
   background: whitesmoke;
-  color: black;
+  color: rgb(51, 51, 51);
   border: 1px solid;
-  border-color: grey;
+  border-color: lightgray;
 }
 .btn-secondary:hover {
   background: lightgray;
   color: black;
   border: 1px solid;
-  border-color: grey;
-}
-.form-control:focus {
-  border-color: rgb(209, 0, 0);
-  box-shadow: none;
-}
-.form-select:focus {
-  border-color: rgb(209, 0, 0);
-  box-shadow: none;
-}
-a,
-a:hover,
-a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-.wd-red {
-  color: rgb(209, 0, 0);
-}
-.wd-truncate-ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.wd-breadcrumb {
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-.wd-pill {
-  color: black;
-  font-size: 0.8rem;
-  display: inline-block;
-  padding: 4px;
-  border-radius: 1rem;
-  border: 1px solid rgba(0,0,0,.25);
-  box-shadow: 0 1px 0 #fff;
-}
-.wd-align-items-center {
-  display: flex;
-  align-items: center;
+  border-color: lightgray;
 }
