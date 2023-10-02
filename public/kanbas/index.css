@@ -50,11 +50,14 @@ a:visited {
 }
 
 /* navigation sidebar styles */
+.wd-navigation-sidebar-container {
+  width: 85px;
+}
 .wd-navigation-sidebar {
   background-color: black;
   width: 85px;
   min-height: 100%;
-  position: static;
+  position: fixed;
 }
 .wd-navigation-sidebar-list {
   width: 100%;
@@ -91,8 +94,8 @@ a:visited {
 /* navigation sub-bar styles */
 .wd-navigation-subbar {
   width: 180px;
-  min-height: 100%;
-  position: static;
+  position: sticky;
+  top: 1rem;
   margin-right: 20px;
 }
 .wd-navigation-subbar-list {
