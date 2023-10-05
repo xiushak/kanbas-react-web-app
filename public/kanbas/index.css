@@ -72,6 +72,16 @@ a:visited {
   color: rgb(209, 0, 0);
   font-size: 2rem;
 }
+.wd-navigation-topbar-dropdown-right {
+  width: 100%;
+  background-color: white;
+}
+.wd-navigation-topbar-dropdown-right-list {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  color: rgb(209, 0, 0);
+}
 
 /* navigation sidebar styles */
 .wd-navigation-sidebar-container {
