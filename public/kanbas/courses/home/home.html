@@ -12,8 +12,24 @@
   <link href="../../index.css" rel="stylesheet" />
   <link href="index.css" rel="stylesheet" />
 </head>
+<div class="wd-navigation-topbar-container d-md-block d-lg-none">
+  <div class="wd-navigation-topbar">
+    <div class="row flex-nowrap text-center px-2 align-items-center">
+      <div class="col-auto">
+        <a href="navbar-dropdown.html"><i class="fa-solid fa-bars"></i></a>
+      </div>
+      <div class="col text-white">
+        <a href="home.html"><h3>CS4550.12631.202410 Home</h3></a>
+      </div>
+      <div class="col-auto">
+        <i class="fa-solid fa-glasses"></i>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="wd-screen">
-  <div class="col-auto wd-navigation-sidebar-container p-0">
+  <div class="col-auto wd-navigation-sidebar-container p-0 d-none d-md-block">
     <div class="wd-navigation-sidebar">
       <ul class="wd-navigation-sidebar-list text-white">
         <li>
@@ -81,37 +97,35 @@
   </div>
   <div class="col" style="margin: 24px">
     <div style="padding-left: 10px; --bs-breadcrumb-divider: '>'">
-      <div class="row flex-nowrap">
-        <div class="col-auto">
-          <i
-            class="fa-solid fa-bars fa-xl wd-red"
-            style="line-height: 3rem"
-          ></i>
-        </div>
-        <div class="col">
-          <div class="row">
-            <div class="col">
-              <ol class="breadcrumb wd-breadcrumb">
-                <li class="breadcrumb-item wd-red">
-                  <a href="home.html">CS4550.12631.202410</a>
-                </li>
-                <li class="breadcrumb-item active">
-                  <a href="home.html"> Home </a>
-                </li>
-              </ol>
-            </div>
-            <div class="col-auto">
-              <button class="btn btn-secondary">
-                <i class="fa-solid fa-glasses"></i> Student View
-              </button>
-            </div>
+      <div class="d-none d-md-block">
+        <div class="row flex-nowrap">
+          <div class="col-auto">
+            <i
+              class="fa-solid fa-bars fa-xl wd-red"
+              style="line-height: 3rem"
+            ></i>
+          </div>
+          <div class="col">
+            <ol class="breadcrumb wd-breadcrumb">
+              <li class="breadcrumb-item wd-red">
+                <a href="home.html">CS4550.12631.202410</a>
+              </li>
+              <li class="breadcrumb-item active">
+                <a href="home.html"> Home </a>
+              </li>
+            </ol>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-secondary">
+              <i class="fa-solid fa-glasses"></i> Student View
+            </button>
           </div>
         </div>
+        <hr />
       </div>
-      <hr />
       <div class="container-fluid p-0">
         <div class="row flex-nowrap p-0">
-          <div class="col-auto">
+          <div class="col-auto d-none d-md-block">
             <div class="wd-navigation-subbar">
               <div style="padding-left: 16px">
                 <h6 class="wd-truncate-ellipsis">
