@@ -1,0 +1,215 @@
+.wd-red {
+  color: rgb(209, 0, 0) !important;
+}
+.wd-truncate-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wd-breadcrumb {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.wd-pill {
+  color: black;
+  font-size: 0.8rem;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 #fff;
+}
+.wd-align-items-center {
+  display: flex;
+  align-items: center;
+}
+.wd-screen {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* overriden styles */
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.form-control:focus {
+  border-color: rgb(209, 0, 0);
+  box-shadow: none;
+}
+.form-select:focus {
+  border-color: rgb(209, 0, 0);
+  box-shadow: none;
+}
+
+/* navigation topbar styles */
+.wd-navigation-topbar-container {
+  width: 100%;
+  height: 85px;
+}
+.wd-navigation-topbar i {
+  color: white;
+  font-size: 1.5rem;
+}
+.wd-navigation-topbar {
+  background-color: black;
+  width: 100%;
+  padding-top: 20px;
+  height: 85px;
+}
+.wd-navigation-topbar-dropdown-left {
+  width: 100%;
+  list-style: none;
+}
+.wd-navigation-topbar-dropdown-left li {
+  display: block;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: rgb(209, 0, 0);
+  font-size: 2rem;
+}
+.wd-navigation-topbar-dropdown-right {
+  width: 100%;
+  background-color: white;
+}
+.wd-navigation-topbar-dropdown-right-list {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  color: rgb(209, 0, 0);
+}
+
+/* navigation sidebar styles */
+.wd-navigation-sidebar-container {
+  width: 85px;
+}
+.wd-navigation-sidebar {
+  background-color: black;
+  width: 85px;
+  min-height: 100%;
+  position: fixed;
+  padding-top: 4px;
+}
+.wd-navigation-sidebar a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: black;
+}
+.navigation-sidebar-active {
+  background-color: white !important;
+}
+.navigation-sidebar-active p {
+  color: rgb(209, 0, 0) !important;
+}
+.wd-navigation-sidebar-icon {
+  color: rgb(209, 0, 0);
+  font-size: 2rem;
+}
+.wd-navigation-sidebar p {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* dashboard styles */
+.wd-dashboard h1 {
+  color: rgb(45, 59, 69);
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.wd-dashboard h2 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+/* dashboard cards */
+.wd-card-container {
+  max-width: 1400px;
+  gap: 30px;
+}
+.wd-card {
+  width: 270px;
+  height: 242px;
+}
+.wd-card h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wd-card p {
+  color: rgb(45, 59, 69);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+/* navigation sub-bar styles */
+.wd-navigation-subbar {
+  width: 180px;
+  position: sticky;
+  top: 1rem;
+  margin-right: 20px;
+}
+.wd-navigation-subbar-list {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+}
+.wd-navigation-subbar-list li {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+}
+.wd-navigation-subbar-list a {
+  color: rgb(209, 0, 0) !important;
+}
+.wd-navigation-subbar h6 {
+  color: black;
+  font-size: 0.8rem;
+}
+/* navigation subbar selected item */
+.wd-navigation-subbar-list-selected {
+  border-left: 2px solid black !important;
+  padding-left: 8px !important;
+}
+.wd-navigation-subbar-list-selected a {
+  color: black !important;
+}
+
+/* primary + secondary button styles */
+.btn-primary {
+  background: rgb(209, 0, 0);
+  color: white;
+  border: 1px solid;
+}
+.btn-primary:hover {
+  background: darkred;
+  color: white;
+  border: 1px solid;
+}
+.btn-secondary {
+  background: whitesmoke;
+  color: rgb(51, 51, 51);
+  border: 1px solid;
+  border-color: lightgray;
+}
+.btn-secondary:hover {
+  background: lightgray;
+  color: black;
+  border: 1px solid;
+  border-color: lightgray;
+}

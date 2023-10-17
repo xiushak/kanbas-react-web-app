@@ -14,6 +14,7 @@ import ForLoops from "./ForLoops";
 import MapFunction from "./MapFunction";
 import JsonStringify from "./JsonStringify";
 import FindFunction from "./FindFunction";
+import FindIndex from "./FindIndex";
 import FilterFunction from "./FilterFunction";
 import TemplateLiterals from "./TemplateLiterals";
 import House from "./House";
@@ -33,6 +34,7 @@ function JavaScript() {
       <House />
       <TemplateLiterals />
       <FilterFunction />
+      <FindIndex/>
       <FindFunction />
       <JsonStringify />
       <MapFunction />

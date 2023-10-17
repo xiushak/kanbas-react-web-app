@@ -1,6 +1,6 @@
 import JavaScript from "./JavaScript";
 import PathParameters from "./PathParameters";
-import Classes from "../Classes";
+import Classes from "./Classes";
 import Styles from "./styles";
 import ConditionalOutput from "./ConditionalOutput";
 import TodoItem from "./todo/TodoItem";
@@ -10,8 +10,6 @@ function Assignment3() {
     <div>
       <h1>Assignment 3</h1>
       <TodoList />
-      <TodoItem todo={{ done: true, title: "TODO 123", status: "COMPLETE" }} />
-      <TodoItem todo={{ done: true, title: "TODO 123", status: "COMPLETE" }} />
       <TodoItem todo={{ done: true, title: "TODO 123", status: "COMPLETE" }} />
       <ConditionalOutput />
       <Styles />
