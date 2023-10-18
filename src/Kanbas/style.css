@@ -38,12 +38,12 @@ a:visited {
   text-decoration: none !important;
 }
 .form-control:focus {
-  border-color: rgb(209, 0, 0);
-  box-shadow: none;
+  border-color: rgb(209, 0, 0) !important;
+  box-shadow: none !important;
 }
 .form-select:focus {
-  border-color: rgb(209, 0, 0);
-  box-shadow: none;
+  border-color: rgb(209, 0, 0) !important;
+  box-shadow: none !important;
 }
 
 /* navigation topbar styles */
