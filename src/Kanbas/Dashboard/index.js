@@ -8,7 +8,7 @@ function Dashboard() {
     <div className="px-4 py-2 w-100 wd-dashboard">
       <h1>Dashboard</h1>
       <hr />
-      <div className="container-fluid m-2">
+      <div className="container-fluid">
         <h2>Published Courses ({courses.length})</h2>
         <hr />
         <div className="flex-row d-flex flex-wrap wd-card-container">
@@ -32,9 +32,7 @@ function Dashboard() {
                     class="card-text"
                     style={{ padding: "12px", height: "40%" }}
                   >
-                    <h5 style={{ color: "lightskyblue" }}>
-                      {course.name || "hello"}
-                    </h5>
+                    <h5 style={{ color: "lightskyblue" }}>{course.name}</h5>
                     <p>
                       {course.number} <br />
                       {course.startDate} {course.endDate}

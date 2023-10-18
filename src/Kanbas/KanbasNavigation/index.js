@@ -44,8 +44,8 @@ function KanbasNavigation() {
           <Link
             key={index}
             to={`/Kanbas/${link}`}
-            className={`list-group-item ${
-              pathname.includes(link) && "navigation-sidebar-active"
+            className={`list-group-item navigation-sidebar-item ${
+              pathname.includes(link) && "active"
             }`}
           >
             {icons[index]}
