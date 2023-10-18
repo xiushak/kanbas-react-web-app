@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import KanbasNavigation from "./KanbasNavigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import "./style.css"
 
 function Kanbas() {
   return (

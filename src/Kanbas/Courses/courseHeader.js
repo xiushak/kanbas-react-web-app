@@ -1,6 +1,7 @@
 import { useParams, useLocation } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaGlasses } from "react-icons/fa6";
 
 import db from "../Database";
 
@@ -12,13 +13,13 @@ function CourseHeader() {
 
   return (
     <>
-      <div class="row flex-nowrap align-items-center">
-        <div class="col-auto">
+      <div className="row flex-nowrap align-items-center">
+        <div className="col-auto">
           <h1>
-            <GiHamburgerMenu className="wd-red" />
+            <GiHamburgerMenu className="wd-red align-top" />
           </h1>
         </div>
-        <div class="col">
+        <div className="col">
           <div
             style={{ "--bs-breadcrumb-divider": "'>'" }}
             className="wd-breadcrumb"
@@ -46,9 +47,9 @@ function CourseHeader() {
             </Breadcrumb>
           </div>
         </div>
-        <div class="col-auto">
-          <button class="btn btn-secondary">
-            <i class="fa-solid fa-glasses"></i> Student View
+        <div className="col-auto">
+          <button className="btn btn-secondary">
+            <FaGlasses /> Student View
           </button>
         </div>
       </div>

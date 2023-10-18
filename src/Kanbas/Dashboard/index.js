@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { FaRegPenToSquare } from "react-icons/fa6";
+
 import db from "../Database";
+import DashboardCard from "./dashboardCard";
 
 function Dashboard() {
   const courses = db.courses;
@@ -13,36 +13,7 @@ function Dashboard() {
         <hr />
         <div className="flex-row d-flex flex-wrap wd-card-container">
           {courses.map((course) => (
-            <div class="col-auto">
-              <Link
-                key={course._id}
-                to={`/Kanbas/Courses/${course._id}`}
-                className="list-group-item"
-              >
-                {/* card component */}
-                <div class="card wd-card">
-                  <img
-                    src="images/crying-baby.jpg"
-                    class="card-img-top"
-                    width="100%"
-                    height="145px"
-                    alt="..."
-                  />
-                  <div
-                    class="card-text"
-                    style={{ padding: "12px", height: "40%" }}
-                  >
-                    <h5 style={{ color: "lightskyblue" }}>{course.name}</h5>
-                    <p>
-                      {course.number} <br />
-                      {course.startDate} {course.endDate}
-                    </p>
-                    <FaRegPenToSquare />
-                    <i class="fa-regular fa-pen-to-square"></i>
-                  </div>
-                </div>
-              </Link>
-            </div>
+            <DashboardCard course={course} />
           ))}
         </div>
       </div>
