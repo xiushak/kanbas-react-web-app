@@ -1,15 +1,11 @@
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
-import db from "../../Kanbas/Database";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import CourseHeader from "./courseHeader";
 import Home from "./Home";
 
 function Courses() {
-  const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
-
   return (
     <div className="px-4 py-2 w-100">
       <CourseHeader />
