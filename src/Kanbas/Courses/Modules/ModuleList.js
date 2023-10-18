@@ -14,13 +14,14 @@ function ModuleList() {
         <Button variant="secondary">Collapse All</Button>
         <Button variant="secondary">View Progress</Button>
         <Button variant="secondary">
-          <FaRegCircleCheck style={{ color: "green" }} /> Publish All
+          <FaRegCircleCheck className="mb-1" style={{ color: "green" }} />{" "}
+          Publish All
         </Button>
         <Button variant="primary">
-          <FaPlus /> Module
+          <FaPlus className="mb-1" /> Module
         </Button>
         <Button variant="secondary">
-          <FaEllipsisVertical style={{ "fontSize": "1.5rem" }} />
+          <FaEllipsisVertical className="mb-1" />
         </Button>
       </div>
       <hr />

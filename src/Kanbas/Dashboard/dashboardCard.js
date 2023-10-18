@@ -24,7 +24,6 @@ function DashboardCard({ course }) {
               {course.startDate} {course.endDate}
             </p>
             <FaRegPenToSquare />
-            <i className="fa-regular fa-pen-to-square"></i>
           </div>
         </div>
       </Link>

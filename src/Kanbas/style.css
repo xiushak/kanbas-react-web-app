@@ -190,10 +190,20 @@ a:visited {
 .wd-module-lesson-item {
   padding: 12px;
   border-bottom: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
   border-left: 4px solid green;
 }
+.btn-publish {
+  background: green !important;
+  color: white !important;
+  border: 1px solid !important;
+  border-color: grey !important;
+}
+.publish:hover {
+  background: darkgreen !important;
+}
 
-/* primary + secondary button styles */
+/* override primary + secondary button styles */
 .btn-primary {
   background: rgb(209, 0, 0) !important;
   color: white !important;

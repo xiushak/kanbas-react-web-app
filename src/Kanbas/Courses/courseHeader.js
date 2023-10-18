@@ -49,7 +49,7 @@ function CourseHeader() {
         </div>
         <div className="col-auto">
           <button className="btn btn-secondary">
-            <FaGlasses /> Student View
+            <FaGlasses className="mb-1" /> Student View
           </button>
         </div>
       </div>

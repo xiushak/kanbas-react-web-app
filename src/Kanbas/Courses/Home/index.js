@@ -1,11 +1,15 @@
 import ModuleList from "../Modules/ModuleList";
+import CourseStatus from "./status";
 
 function Home() {
   return (
-    <div>
-      <h2>Home</h2>
-      <ModuleList />
-      <h2>Status</h2>
+    <div className="row">
+      <div className="col">
+        <ModuleList />
+      </div>
+      <div className="col-auto d-none d-xl-block wd-course-status px-4">
+        <CourseStatus />
+      </div>
     </div>
   );
 }
