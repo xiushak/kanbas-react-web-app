@@ -37,7 +37,7 @@ function KanbasNavigation() {
   ];
   const { pathname } = useLocation();
   return (
-    <div className="wd-navigation-sidebar-container">
+    <div className="wd-navigation-sidebar-container d-none d-md-block">
       <div className="wd-navigation-sidebar">
         <img src="/images/NU_logo.png" alt="NU Logo" width="100%" />
         {links.map((link, index) => (

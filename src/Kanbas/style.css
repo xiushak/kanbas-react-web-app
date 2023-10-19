@@ -168,17 +168,21 @@ a:visited {
   padding-left: 8px;
   color: black;
 }
+
 /* course header styles */
 .wd-breadcrumb {
   font-size: 1.8rem;
   font-weight: 600;
 }
-
 .wd-breadcrumb > .breadcrumb {
   flex-wrap: nowrap;
 }
 
 /* course modules styles */
+.wd-list {
+  list-style: none;
+  padding-left: 0;
+}
 .wd-list-header {
   background: whitesmoke;
   padding: 12px;

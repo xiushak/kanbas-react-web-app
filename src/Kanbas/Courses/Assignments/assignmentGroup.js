@@ -12,7 +12,7 @@ function AssignmentGroup({ assignmentGroup }) {
   return (
     <>
       <div className="mt-4">
-        <ul className="list-group">
+        <ul className="wd-list">
           <li className="wd-list-header">
             <div className="row flex-nowrap">
               <div className="col-auto wd-align-items-center">

@@ -14,12 +14,14 @@ function CourseNavigation() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   return (
-    <div className="wd-course-navbar mx-2">
+    <div className="wd-course-navbar mx-2 d-none d-md-block">
       {links.map((link, index) => (
         <Link
           key={index}
           to={`/Kanbas/Courses/${courseId}/${link}`}
-          className={`wd-course-navbar-item ${pathname.includes(link) && "active"}`}
+          className={`wd-course-navbar-item ${
+            pathname.includes(link) && "active"
+          }`}
         >
           {link.replace("+", " ")}
         </Link>

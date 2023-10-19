@@ -12,7 +12,7 @@ function CourseHeader() {
   const path = pathname.split("/").splice(4);
 
   return (
-    <>
+    <div className="d-none d-md-block">
       <div className="row flex-nowrap align-items-center">
         <div className="col-auto">
           <h1>
@@ -23,7 +23,7 @@ function CourseHeader() {
           <Breadcrumb className="text-nowrap wd-breadcrumb">
             <Breadcrumb.Item
               href={`#/Kanbas/Courses/${courseId}`}
-              className="wd-breadcrumb-item"
+              className="text-truncate"
             >
               <span className="wd-red">{course.name}</span>
             </Breadcrumb.Item>
@@ -33,6 +33,7 @@ function CourseHeader() {
                 href={`#/Kanbas/Courses/${courseId}/${path
                   .slice(0, index + 1)
                   .join("/")}`}
+                className="text-truncate"
                 active={index === path.length - 1}
               >
                 <span className={index < path.length - 1 && "wd-red"}>
@@ -49,7 +50,7 @@ function CourseHeader() {
         </div>
       </div>
       <hr />
-    </>
+    </div>
   );
 }
 

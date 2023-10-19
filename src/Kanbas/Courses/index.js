@@ -11,15 +11,11 @@ function Courses() {
   return (
     <div className="px-4 py-2 w-100">
       <CourseHeader />
-      <CourseNavigation />
-      <div>
-        <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{
-            left: "320px",
-            top: "100px",
-          }}
-        >
+      <div className="row flex-nowrap">
+        <div className="col-auto">
+          <CourseNavigation />
+        </div>
+        <div className="col">
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />

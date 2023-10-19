@@ -9,7 +9,7 @@ import {
 function ModuleItem({ module }) {
   return (
     <div className="mt-4">
-      <ul className="list-group">
+      <ul className="wd-list">
         {/* header item */}
         <li className="wd-list-header">
           <div className="row flex-nowrap">
