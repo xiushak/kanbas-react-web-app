@@ -19,33 +19,28 @@ function CourseHeader() {
             <GiHamburgerMenu className="wd-red align-top" />
           </h1>
         </div>
-        <div className="col">
-          <div
-            style={{ "--bs-breadcrumb-divider": "'>'" }}
-            className="wd-breadcrumb"
-          >
-            <Breadcrumb>
+        <div style={{ "--bs-breadcrumb-divider": "'>'" }} className="col">
+          <Breadcrumb className="text-nowrap wd-breadcrumb">
+            <Breadcrumb.Item
+              href={`#/Kanbas/Courses/${courseId}`}
+              className="wd-breadcrumb-item"
+            >
+              <span className="wd-red">{course.name}</span>
+            </Breadcrumb.Item>
+            {path.map((item, index) => (
               <Breadcrumb.Item
-                href={`#/Kanbas/Courses/${courseId}`}
-                className="wd-breadcrumb-item"
+                key={index}
+                href={`#/Kanbas/Courses/${courseId}/${path
+                  .slice(0, index + 1)
+                  .join("/")}`}
+                active={index === path.length - 1}
               >
-                <span className="wd-red">{course.name}</span>
+                <span className={index < path.length - 1 && "wd-red"}>
+                  {item.replace("+", " ")}
+                </span>
               </Breadcrumb.Item>
-              {path.map((item, index) => (
-                <Breadcrumb.Item
-                  key={index}
-                  href={`#/Kanbas/Courses/${courseId}/${path
-                    .slice(0, index + 1)
-                    .join("/")}`}
-                  active={index === path.length - 1}
-                >
-                  <span className={index < path.length - 1 && "wd-red"}>
-                    {item.replace("+", " ")}
-                  </span>
-                </Breadcrumb.Item>
-              ))}
-            </Breadcrumb>
-          </div>
+            ))}
+          </Breadcrumb>
         </div>
         <div className="col-auto">
           <button className="btn btn-secondary">

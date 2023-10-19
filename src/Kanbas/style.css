@@ -6,11 +6,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.wd-breadcrumb {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: rgb(209, 0, 0) !important;
-}
 .wd-pill {
   color: black;
   font-size: 0.8rem;
@@ -23,12 +18,6 @@
 .wd-align-items-center {
   display: flex;
   align-items: center;
-}
-.wd-screen {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  min-height: 100%;
 }
 
 /* overriden styles */
@@ -107,7 +96,7 @@ a:visited {
   background-color: white !important;
 }
 .navigation-sidebar-item.active p {
-  color: rgb(209, 0, 0) !important;
+  color: rgb(209, 0, 0);
 }
 .wd-navigation-sidebar-icon {
   color: rgb(209, 0, 0);
@@ -175,9 +164,18 @@ a:visited {
   color: rgb(209, 0, 0);
 }
 .wd-course-navbar-item.active {
-  border-left: 2px solid black !important;
-  padding-left: 8px !important;
+  border-left: 2px solid black;
+  padding-left: 8px;
   color: black;
+}
+/* course header styles */
+.wd-breadcrumb {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.wd-breadcrumb > .breadcrumb {
+  flex-wrap: nowrap;
 }
 
 /* course modules styles */
