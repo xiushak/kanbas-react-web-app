@@ -7,12 +7,14 @@
       {
         "_id": "A101",
         "title": "Propulsion Assignment",
-        "description": "Design a rocket engine for a manned mission to Mars."
+        "description": "Design a rocket engine for a manned mission to Mars.",
+        "points": 100
       },
       {
         "_id": "A102",
         "title": "Combustion Analysis",
-        "description": "Analyse the combustion process in a rocket engine."
+        "description": "Analyse the combustion process in a rocket engine.",
+        "points": 100
       }
     ]
   },
@@ -24,21 +26,20 @@
       {
         "_id": "A103",
         "title": "Nozzle Design Project",
-        "description": "Design a nozzle for a rocket engine."
+        "description": "Design a nozzle for a rocket engine.",
+        "points": 200
       }
     ]
   },
   {
     "course": "RS101",
     "type": "Quizzes",
-    "percentage": 0.1,
-    "assignments": []
+    "percentage": 0.1
   },
   {
     "course": "RS101",
     "type": "Exams",
-    "percentage": 0.2,
-    "assignments": []
+    "percentage": 0.2
   },
   {
     "course": "RS102",
@@ -48,7 +49,8 @@
       {
         "_id": "A201",
         "title": "Aerodynamics Quiz",
-        "description": "A quiz on aerodynamics."
+        "description": "A quiz on aerodynamics.",
+        "points": 43
       }
     ]
   },
@@ -60,12 +62,14 @@
       {
         "_id": "A202",
         "title": "Flow Analysis",
-        "description": "Analyse the flow around a rocket."
+        "description": "Analyse the flow around a rocket.",
+        "points": 100
       },
       {
         "_id": "A203",
         "title": "Heating Analysis",
-        "description": "Analyse the heating of a rocket during re-entry."
+        "description": "Analyse the heating of a rocket during re-entry.",
+        "points": 100
       }
     ]
   },
@@ -83,12 +87,14 @@
       {
         "_id": "A301",
         "title": "Structural Design Task",
-        "description": "Design the structure of a rocket."
+        "description": "Design the structure of a rocket.",
+        "points": 10
       },
       {
         "_id": "A302",
         "title": "Orbital Calculations",
-        "description": "Calculate the orbit of a rocket."
+        "description": "Calculate the orbit of a rocket.",
+        "points": 10
       }
     ]
   },
@@ -100,7 +106,8 @@
       {
         "_id": "A303",
         "title": "Systems Engineering Exam",
-        "description": "An exam on systems engineering."
+        "description": "An exam on systems engineering.",
+        "points": 130
       }
     ]
   }

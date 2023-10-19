@@ -12,7 +12,7 @@ function Assignments() {
   );
   return (
     <div className="px-2">
-      <div class="form-group text-nowrap">
+      <div className="form-group text-nowrap">
         <span className="float-end">
           <button className="btn btn-secondary">
             <FaPlus className="mb-1" /> Group
@@ -27,7 +27,7 @@ function Assignments() {
         <input
           display="inline"
           id="search-assignment"
-          class="form-control w-25"
+          className="form-control w-25"
           placeholder="Search For Assignments"
         />
       </div>

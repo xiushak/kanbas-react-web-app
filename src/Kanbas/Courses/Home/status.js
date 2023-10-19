@@ -13,7 +13,7 @@ function CourseStatus() {
   return (
     <>
       <h4>Course Status</h4>
-      <div class="btn-group mb-2 w-100" role="group">
+      <div className="btn-group mb-2 w-100" role="group">
         <Button variant="secondary">
           <FaBan className="mb-1" /> Unpublish
         </Button>
@@ -21,7 +21,7 @@ function CourseStatus() {
           <FaCircleCheck className="mb-1" /> Published
         </Button>
       </div>
-      <div class="d-grid mb-4">
+      <div className="d-grid mb-4">
         <Button variant="secondary" className="text-start">
           <FaArrowRightToBracket className="mb-1" /> Import Existing Content
         </Button>
@@ -47,7 +47,7 @@ function CourseStatus() {
 
       <h4>To Do</h4>
       <hr />
-      <div class="mb-4">
+      <div className="mb-4">
         <ul>
           <li>
             <h5 className="wd-red">GRADE A1</h5>
