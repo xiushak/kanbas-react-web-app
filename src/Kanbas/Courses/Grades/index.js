@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { FaFileImport, FaFileExport, FaGear, FaFilter } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
 
 import db from "../../Database";
 
