@@ -181,13 +181,13 @@ a:visited {
 }
 
 /* course modules styles */
-.wd-module-item {
+.wd-list-header {
   background: whitesmoke;
   padding: 12px;
   border: 1px solid lightgrey;
   padding-left: 15px;
 }
-.wd-module-lesson-item {
+.wd-list-item {
   padding: 12px;
   border-bottom: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
@@ -202,6 +202,8 @@ a:visited {
 .publish:hover {
   background: darkgreen !important;
 }
+
+/* course assignment styles */
 
 /* override primary + secondary button styles */
 .btn-primary {

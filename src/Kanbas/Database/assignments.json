@@ -1,47 +1,107 @@
 [
   {
-    "_id": "A101",
-    "title": "Propulsion Assignment",
-    "course": "RS101"
+    "course": "RS101",
+    "type": "Assignment",
+    "percentage": 0.4,
+    "assignments": [
+      {
+        "_id": "A101",
+        "title": "Propulsion Assignment",
+        "description": "Design a rocket engine for a manned mission to Mars."
+      },
+      {
+        "_id": "A102",
+        "title": "Combustion Analysis",
+        "description": "Analyse the combustion process in a rocket engine."
+      }
+    ]
   },
   {
-    "_id": "A102",
-    "title": "Combustion Analysis",
-    "course": "RS101"
+    "course": "RS101",
+    "type": "Project",
+    "percentage": 0.3,
+    "assignments": [
+      {
+        "_id": "A103",
+        "title": "Nozzle Design Project",
+        "description": "Design a nozzle for a rocket engine."
+      }
+    ]
   },
   {
-    "_id": "A103",
-    "title": "Nozzle Design Project",
-    "course": "RS101"
+    "course": "RS101",
+    "type": "Quizzes",
+    "percentage": 0.1,
+    "assignments": []
   },
   {
-    "_id": "A201",
-    "title": "Aerodynamics Quiz",
-    "course": "RS102"
+    "course": "RS101",
+    "type": "Exams",
+    "percentage": 0.2,
+    "assignments": []
   },
   {
-    "_id": "A202",
-    "title": "Flow Analysis",
-    "course": "RS102"
+    "course": "RS102",
+    "type": "Quizzes",
+    "percentage": 0.1,
+    "assignments": [
+      {
+        "_id": "A201",
+        "title": "Aerodynamics Quiz",
+        "description": "A quiz on aerodynamics."
+      }
+    ]
   },
   {
-    "_id": "A203",
-    "title": "Heating Analysis",
-    "course": "RS102"
+    "course": "RS102",
+    "type": "Assignment",
+    "percentage": 0.7,
+    "assignments": [
+      {
+        "_id": "A202",
+        "title": "Flow Analysis",
+        "description": "Analyse the flow around a rocket."
+      },
+      {
+        "_id": "A203",
+        "title": "Heating Analysis",
+        "description": "Analyse the heating of a rocket during re-entry."
+      }
+    ]
   },
   {
-    "_id": "A301",
-    "title": "Structural Design Task",
-    "course": "RS103"
+    "course": "RS102",
+    "type": "Exams",
+    "percentage": 0.2,
+    "assignments": []
   },
   {
-    "_id": "A302",
-    "title": "Orbital Calculations",
-    "course": "RS103"
+    "course": "RS103",
+    "type": "Assignment",
+    "percentage": 0.4,
+    "assignments": [
+      {
+        "_id": "A301",
+        "title": "Structural Design Task",
+        "description": "Design the structure of a rocket."
+      },
+      {
+        "_id": "A302",
+        "title": "Orbital Calculations",
+        "description": "Calculate the orbit of a rocket."
+      }
+    ]
   },
   {
-    "_id": "A303",
-    "title": "Systems Engineering Exam",
-    "course": "RS103"
+    "course": "RS103",
+    "type": "Project",
+    "percentage": 0.6,
+    "assignments": [
+      {
+        "_id": "A303",
+        "title": "Systems Engineering Exam",
+        "description": "An exam on systems engineering."
+      }
+    ]
   }
 ]
