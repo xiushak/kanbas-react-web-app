@@ -21,7 +21,7 @@ function KanbasNavigation() {
   ];
   const currentPage = links.find((link) => pathname.includes(link));
   const headerText =
-    currentPage === "Courses" ? course.name + " " + path[1] : currentPage;
+    currentPage === "Courses" && course ? course.name + " " + path[1] : currentPage;
   return (
     <div className="wd-navigation-topbar-container d-sm-block d-md-none">
       <div className="wd-navigation-topbar">
