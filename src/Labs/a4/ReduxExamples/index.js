@@ -1,5 +1,5 @@
 import React from "react";
-import Add from "../Add";
+// import Add from "../Add";
 import AddRedux from "./AddRedux";
 import Counter1 from "./Counter1";
 import Counter2 from "./Counter2";

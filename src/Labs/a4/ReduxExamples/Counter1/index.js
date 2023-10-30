@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increment1, decrement1, setTo } from "./counter1Reducer";
 

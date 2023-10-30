@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import TodoForm from "./TodoForm";
 import TodoItem from "./TodoItem";
-import { useSelector, useDispatch } from "react-redux";
-import { addTodo, deleteTodo, updateTodo, setTodo } from "./todosReducer";
+import { useSelector } from "react-redux";
+import { deleteTodo, setTodo } from "./todosReducer";
 function TodoList() {
   const { todos } = useSelector((state) => state.todosReducer);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   //   const [todos, setTodos] = useState([
   //     { id: "1", title: "Learn React" },
   //     { id: "2", title: "Learn Node" },
