@@ -3,7 +3,7 @@ import CourseStatus from "./status";
 
 function Home() {
   return (
-    <div className="row">
+    <div className="row flex-nowrap">
       <div className="col">
         <ModuleList />
       </div>

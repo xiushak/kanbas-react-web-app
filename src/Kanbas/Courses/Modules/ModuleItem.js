@@ -4,9 +4,10 @@ import {
   FaCircleCheck,
   FaEllipsisVertical,
   FaPlus,
+  FaRegTrashCan,
 } from "react-icons/fa6";
 
-function ModuleItem({ module }) {
+function ModuleItem({ module, setModule, deleteModule }) {
   return (
     <div className="mt-4">
       <ul className="wd-list">
@@ -23,7 +24,18 @@ function ModuleItem({ module }) {
             <div className="col-auto wd-align-items-center">
               <FaCircleCheck className="mx-2 mb-1" style={{ color: "green" }} />
               <FaPlus className="mx-2 mb-1" />
-              <FaEllipsisVertical className="mx-2 mb-1" />
+              <span
+                className="wd-clickable-icon"
+                onClick={() => setModule(module)}
+              >
+                <FaEllipsisVertical className="mx-2 mb-1" />
+              </span>
+              <span
+                className="wd-clickable-icon"
+                onClick={() => deleteModule(module._id)}
+              >
+                <FaRegTrashCan className="mx-2 mb-1" />
+              </span>
             </div>
           </div>
         </li>

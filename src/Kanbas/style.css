@@ -19,6 +19,12 @@
   display: flex;
   align-items: center;
 }
+.wd-clickable-icon {
+  cursor: pointer;
+}
+.wd-clickable-icon:hover {
+  color: rgb(209, 0, 0) !important;
+}
 
 /* overriden styles */
 a,

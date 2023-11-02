@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { FaRegPenToSquare } from "react-icons/fa6";
+import { FaRegPenToSquare, FaRegTrashCan } from "react-icons/fa6";
 
-function DashboardCard({ course }) {
+function DashboardCard({ course, setEditCourse, deleteCourse }) {
   return (
     <div className="col-auto">
       <Link
@@ -23,7 +23,25 @@ function DashboardCard({ course }) {
               {course.number} <br />
               {course.startDate} {course.endDate}
             </p>
-            <FaRegPenToSquare />
+            <div class="text-end">
+              <span
+                className="wd-clickable-icon p-1"
+                onClick={setEditCourse}
+                title="Edit Course"
+              >
+                <FaRegPenToSquare className="mb-1 mx-2" />
+              </span>
+              <span
+                className="wd-clickable-icon p-1"
+                onClick={(event) => {
+                  event.preventDefault();
+                  deleteCourse(course._id);
+                }}
+                title="Delete Course"
+              >
+                <FaRegTrashCan className="mb-1 mx-2" />
+              </span>
+            </div>
           </div>
         </div>
       </Link>

@@ -3,11 +3,8 @@ import { Breadcrumb } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaGlasses } from "react-icons/fa6";
 
-import db from "../Database";
-
-function CourseHeader() {
+function CourseHeader({ course }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
   const path = pathname.split("/").splice(4);
 

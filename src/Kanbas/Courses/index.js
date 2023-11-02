@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
 
 import CourseHeader from "./courseHeader";
 import CourseNavigation from "./CourseNavigation";
@@ -8,10 +8,12 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }) {
+  const { courseId } = useParams();
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="px-4 py-2 w-100">
-      <CourseHeader />
+      <CourseHeader course={course}/>
       <div className="row flex-nowrap">
         <div className="col-auto">
           <CourseNavigation />

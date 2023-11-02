@@ -3,12 +3,10 @@ import { Button } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaCaretDown, FaGlasses } from "react-icons/fa6";
 
-import db from "../Database";
-
-function KanbasNavigation() {
+function KanbasNavigation({ courses }) {
   const { pathname } = useLocation();
   const path = pathname.split("/").splice(3);
-  const course = db.courses.find((course) => course._id === path[0]);
+  const course = courses.find((course) => course._id === path[0]);
   const links = [
     "Account",
     "Dashboard",
@@ -21,7 +19,9 @@ function KanbasNavigation() {
   ];
   const currentPage = links.find((link) => pathname.includes(link));
   const headerText =
-    currentPage === "Courses" && course ? course.name + " " + path[1] : currentPage;
+    currentPage === "Courses" && course
+      ? course.name + " " + path[1]
+      : currentPage;
   return (
     <div className="wd-navigation-topbar-container d-sm-block d-md-none">
       <div className="wd-navigation-topbar">
