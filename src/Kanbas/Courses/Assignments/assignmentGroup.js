@@ -1,14 +1,19 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import {
   FaGripVertical,
   FaEllipsisVertical,
   FaPlus,
   FaRegPenToSquare,
   FaCircleCheck,
+  FaRegTrashCan,
 } from "react-icons/fa6";
+import { setAssignment, deleteAssignment } from "./assignmentReducer";
+import { useDispatch } from "react-redux";
 
 function AssignmentGroup({ assignmentGroup }) {
   const { courseId } = useParams();
+  const dispatch = useDispatch();
+  const navigagte = useNavigate();
   return (
     <>
       <div className="mt-4">
@@ -43,14 +48,18 @@ function AssignmentGroup({ assignmentGroup }) {
                       style={{ color: "green" }}
                     />
                   </div>
-                  <div className="col">
-                    <Link
-                      key={assignment._id}
-                      to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                      className="text-black"
-                    >
-                      <h5>{assignment.title}</h5>
-                    </Link>
+                  <div
+                    className="col wd-cursor-pointer"
+                    onClick={() => {
+                      dispatch(
+                        setAssignment({ courseId: courseId, ...assignment })
+                      );
+                      navigagte(
+                        `/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`
+                      );
+                    }}
+                  >
+                    <h5>{assignment.title}</h5>
                   </div>
                   <div className="col-auto wd-align-items-center">
                     <FaCircleCheck
@@ -58,6 +67,19 @@ function AssignmentGroup({ assignmentGroup }) {
                       style={{ color: "green" }}
                     />
                     <FaEllipsisVertical className="mx-2 mb-1" />
+                    <span
+                      className="wd-clickable-icon"
+                      onClick={() =>
+                        dispatch(
+                          deleteAssignment({
+                            course: courseId,
+                            _id: assignment._id,
+                          })
+                        )
+                      }
+                    >
+                      <FaRegTrashCan className="mx-2 mb-1" />
+                    </span>
                   </div>
                 </div>
               </li>

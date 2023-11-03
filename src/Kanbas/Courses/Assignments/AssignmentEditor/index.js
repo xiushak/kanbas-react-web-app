@@ -1,30 +1,27 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
 import { FaEllipsisVertical, FaCircleCheck } from "react-icons/fa6";
-import db from "../../../Database";
+import {
+  updateAssignment,
+  setAssignment,
+  addAssignment,
+} from "../assignmentReducer";
 
 function AssignmentEditor() {
   const { courseId, assignmentId } = useParams();
-  const assignmentGroups = db.assignments.filter(
-    (assignmetGroup) => assignmetGroup.course === courseId
-  );
-  const assignment = assignmentGroups
-    .map(
-      (assignmentType) =>
-        assignmentType.assignments &&
-        assignmentType.assignments.find(
-          (assignment) => assignment._id === assignmentId
-        )
-    )
-    .find((assignment) => assignment !== undefined);
-
+  const assignment = useSelector((state) => state.assignmentReducer.assignment);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+    if (assignmentId === "NewAssignment") {
+      dispatch(addAssignment(assignment));
+    } else {
+      dispatch(updateAssignment(assignment));
+    }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
-  console.log(assignment);
   return (
     <div>
       <div className="form-group text-nowrap text-end">
@@ -40,8 +37,12 @@ function AssignmentEditor() {
         <div className="row mb-4 wd-edit-section">
           <h4>Assignment Name</h4>
           <input
-            defaultValue={assignment.title}
+            value={assignment.title}
+            placeholder="Assignment Name"
             className="form-control mb-2"
+            onChange={(e) =>
+              dispatch(setAssignment({ ...assignment, title: e.target.value }))
+            }
           />
           <textarea
             className="form-control"
@@ -49,7 +50,13 @@ function AssignmentEditor() {
             type="text"
             id="assignment-description"
             rows="3"
-            defaultValue={assignment.description}
+            value={assignment.description}
+            placeholder="Assignment Description"
+            onChange={(e) =>
+              dispatch(
+                setAssignment({ ...assignment, description: e.target.value })
+              )
+            }
           ></textarea>
         </div>
         <div className="row mb-4 flex-nowrap">
@@ -59,7 +66,13 @@ function AssignmentEditor() {
               className="form-control"
               type="text"
               id="assignment-points"
-              defaultValue={assignment.points}
+              value={assignment.points}
+              placeholder="Points"
+              onChange={(e) =>
+                dispatch(
+                  setAssignment({ ...assignment, points: e.target.value })
+                )
+              }
             />
           </div>
         </div>

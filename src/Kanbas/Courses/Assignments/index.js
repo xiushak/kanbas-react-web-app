@@ -1,12 +1,20 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import db from "../../Database";
+import { useParams, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { Button } from "react-bootstrap";
+
 import { FaPlus, FaEllipsisVertical } from "react-icons/fa6";
 import AssignmentGroup from "./assignmentGroup.js";
+import { setAssignment } from "./assignmentReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const assignments = useSelector(
+    (state) => state.assignmentReducer.assignments
+  );
+  // const assignment = useSelector((state) => state.assignmentReducer.assignment);
   const courseAssignmentsGroups = assignments.filter(
     (assignmentGroup) => assignmentGroup.course === courseId
   );
@@ -17,9 +25,22 @@ function Assignments() {
           <button className="btn btn-secondary">
             <FaPlus className="mb-1" /> Group
           </button>
-          <button className="btn btn-primary">
-            <FaPlus className="mb-1" /> Module
-          </button>
+          <Button
+            variant="primary"
+            onClick={() => {
+              dispatch(
+                setAssignment({
+                  course: courseId,
+                  title: "New Assignment",
+                  description: "",
+                  points: 100,
+                })
+              );
+              navigate(`NewAssignment`);
+            }}
+          >
+            <FaPlus className="mb-1" /> Assignment
+          </Button>
           <button className="btn btn-secondary">
             <FaEllipsisVertical className="mb-1" />
           </button>

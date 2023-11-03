@@ -19,6 +19,9 @@
   display: flex;
   align-items: center;
 }
+.wd-pointer-curson {
+  cursor: pointer;
+}
 .wd-clickable-icon {
   cursor: pointer;
 }
