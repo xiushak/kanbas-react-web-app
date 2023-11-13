@@ -1,0 +1,39 @@
+.wd-modules-list-module {
+  font-weight: 500;
+  margin-bottom: 36px;
+}
+.wd-modules-list-module li {
+  border-left: 4px solid green;
+}
+.wd-modules-list a,
+.wd-modules-list a:hover,
+.wd-modules-list a:visited {
+  color: rgb(209, 0, 0);
+}
+.wd-course-status {
+  width: 300px;
+}
+.wd-course-status a {
+  color: rgb(209, 0, 0);
+}
+.wd-course-status h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.wd-course-status p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+.wd-publish-button {
+  background: green;
+  color: white;
+  border: 1px solid;
+  border-color: grey;
+}
+.wd-publish-button:hover {
+  background: darkgreen;
+  color: white;
+  border: 1px solid;
+  border-color: grey;
+}

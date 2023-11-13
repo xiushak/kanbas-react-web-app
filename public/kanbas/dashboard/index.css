@@ -1,0 +1,34 @@
+h1 {
+  color: rgb(45, 59, 69);
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+h2 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.wd-card-container {
+  max-width: 1200px;
+  gap: 30px;
+}
+.wd-card {
+  width: 270px;
+  height: 242px;
+}
+.wd-card h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wd-card p {
+  color: rgb(45, 59, 69);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0px;
+}

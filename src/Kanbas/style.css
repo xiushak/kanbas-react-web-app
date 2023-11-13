@@ -1,0 +1,249 @@
+.wd-red {
+  color: rgb(209, 0, 0) !important;
+}
+.wd-truncate-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wd-pill {
+  color: black;
+  font-size: 0.8rem;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 #fff;
+}
+.wd-align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+/* overriden styles */
+a,
+a:hover,
+a:visited {
+  text-decoration: none !important;
+}
+.form-control:focus {
+  border-color: rgb(209, 0, 0) !important;
+  box-shadow: none !important;
+}
+.form-select:focus {
+  border-color: rgb(209, 0, 0) !important;
+  box-shadow: none !important;
+}
+
+/* navigation topbar styles */
+.wd-navigation-topbar-container {
+  width: 100%;
+  height: 85px;
+}
+.wd-navigation-topbar i {
+  color: white;
+  font-size: 1.5rem;
+}
+.wd-navigation-topbar {
+  background-color: black;
+  width: 100%;
+  padding-top: 20px;
+  height: 85px;
+}
+.wd-navigation-topbar-dropdown-left {
+  width: 100%;
+  list-style: none;
+}
+.wd-navigation-topbar-dropdown-left li {
+  display: block;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: rgb(209, 0, 0);
+  font-size: 2rem;
+}
+.wd-navigation-topbar-dropdown-right {
+  width: 100%;
+  background-color: white;
+}
+.wd-navigation-topbar-dropdown-right-list {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  color: rgb(209, 0, 0);
+}
+
+/* navigation sidebar styles */
+.wd-navigation-sidebar-container {
+  width: 85px;
+}
+.wd-navigation-sidebar {
+  background-color: black;
+  width: 85px;
+  min-height: 100%;
+  position: fixed;
+  padding-top: 4px;
+}
+.wd-navigation-sidebar a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: black;
+}
+.navigation-sidebar-item.active {
+  background-color: white !important;
+}
+.navigation-sidebar-item.active p {
+  color: rgb(209, 0, 0);
+}
+.wd-navigation-sidebar-icon {
+  color: rgb(209, 0, 0);
+  font-size: 2rem;
+}
+.wd-navigation-sidebar p {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* dashboard styles */
+.wd-dashboard h1 {
+  color: rgb(45, 59, 69);
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.wd-dashboard h2 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+/* dashboard cards */
+.wd-card-container {
+  max-width: 1400px;
+  gap: 30px;
+}
+.wd-card {
+  width: 270px;
+  height: 242px;
+}
+.wd-card h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wd-card p {
+  color: rgb(45, 59, 69);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+/* course navbar styles */
+.wd-course-navbar {
+  width: 180px;
+  position: sticky;
+  top: 1rem;
+  margin-right: 20px;
+}
+.wd-course-navbar h6 {
+  color: black;
+  font-size: 0.8rem;
+}
+.wd-course-navbar-item {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  color: rgb(209, 0, 0);
+}
+.wd-course-navbar-item.active {
+  border-left: 2px solid black;
+  padding-left: 8px;
+  color: black;
+}
+
+/* course header styles */
+.wd-breadcrumb {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.wd-breadcrumb > .breadcrumb {
+  flex-wrap: nowrap;
+}
+
+/* course modules styles */
+.wd-list {
+  list-style: none;
+  padding-left: 0;
+}
+.wd-list-header {
+  background: whitesmoke;
+  padding: 12px;
+  border: 1px solid lightgrey;
+  padding-left: 15px;
+}
+.wd-list-item {
+  padding: 12px;
+  border-bottom: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-left: 4px solid green;
+}
+.btn-publish {
+  background: green !important;
+  color: white !important;
+  border: 1px solid !important;
+  border-color: grey !important;
+}
+.publish:hover {
+  background: darkgreen !important;
+}
+
+/* course assignment edit styles */
+.wd-edit-section h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+.wd-edit-section-form-label {
+  width: 200px !important;
+  padding-top: 0.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: end;
+  padding-right: 0;
+}
+.wd-edit-section-form {
+  padding: 12px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+}
+.wd-edit-section-form h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+/* override primary + secondary button styles */
+.btn-primary {
+  background: rgb(209, 0, 0) !important;
+  color: white !important;
+  border: 1px solid !important;
+}
+.btn-primary:hover {
+  background: darkred !important;
+}
+.btn-secondary {
+  background: whitesmoke !important;
+  color: rgb(51, 51, 51) !important;
+  border: 1px solid !important;
+  border-color: lightgray !important;
+}
+.btn-secondary:hover {
+  background: lightgray !important;
+  color: black !important;
+}

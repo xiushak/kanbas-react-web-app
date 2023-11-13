@@ -1,174 +1,603 @@
-<table width="100%">
-  <tbody>
-    <tr valign="top">
-      <td>
-        <ul>
-          <li><a href="../../account/index.html">Account</a></li>
-          <li><a href="../../index.html">Dashboard</a></li>
-          <li><a href="../index.html">Courses</a></li>
-          <li><a href="#">Calendar</a></li>
-          <li><a href="#">Inbox</a></li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Studio</a></li>
-          <li><a href="#">Commons</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><a href="../home/home.html">Home</a></li>
-          <li><a href="#">Modules</a></li>
-          <li><a href="#">Piazza</a></li>
-          <li><a href="#">Zoom Meetings</a></li>
-          <li><a href="index.html">Assignments</a></li>
-          <li><a href="#">Quizzes</a></li>
-          <li><a href="../grades/grades.html">Grades</a></li>
-          <li><a href="#">People</a></li>
-          <li><a href="#">Panopto Video</a></li>
-          <li><a href="#">Discussions</a></li>
-          <li><a href="#">Announcements</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Files</a></li>
-          <li><a href="#">Rubrics</a></li>
-          <li><a href="#">Outcomes</a></li>
-          <li><a href="#">Collaborations</a></li>
-          <li><a href="#">Syllabus</a></li>
-          <li><a href="#">Settings</a></li>
-        </ul>
-      </td>
-      <td>
-        <div>
-          <input id="search-assignment" placeholder="Search For Assignments" />
-          <button>Group</button>
-          <button>Assignment</button>
-          <select id="edit-assignment-dates">
-            <option selected value="EDIT">Edit Assignment Dates</option>
-          </select>
+<head>
+  <!-- bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- fontawesome -->
+  <link
+    href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+    rel="stylesheet"
+  />
+  <link href="../../index.css" rel="stylesheet" />
+  <link href="index.css" rel="stylesheet" />
+</head>
+<div class="wd-screen">
+  <div class="col-auto wd-navigation-sidebar-container p-0">
+    <div class="wd-navigation-sidebar">
+      <ul class="wd-navigation-sidebar-list text-white">
+        <li>
+          <img src="../../../images/NU_logo.png" width="100%" />
+        </li>
+        <li>
+          <a href="../../account/profile/index.html">
+            <i
+              class="fa-regular fa-user-circle"
+              style="font-size: 2rem; color: grey"
+            ></i>
+            <p>Account</p>
+          </a>
+        </li>
+        <li>
+          <a href="../../dashboard/index.html">
+            <i class="fa-solid fa-gauge"></i>
+            <p>Dashboard</p></a
+          >
+        </li>
+        <li class="wd-navigation-sidebar-list-selected">
+          <a href="../home/home.html">
+            <i class="fa-solid fa-book"></i>
+            <p>Courses</p></a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-calendar-days"></i>
+            <p>Calendar</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-inbox"></i>
+            <p>Inbox</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-clock"></i>
+            <p>History</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-desktop"></i>
+            <p>Studio</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <p>Commons</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-circle-question"></i>
+            <p>Help</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="margin: 24px">
+    <div style="padding-left: 10px; --bs-breadcrumb-divider: '>'">
+      <div class="row flex-nowrap">
+        <div class="col-auto">
+          <i
+            class="fa-solid fa-bars fa-xl wd-red"
+            style="line-height: 3rem"
+          ></i>
         </div>
-        <hr />
-        <div>
-          <h2>
-            ASSIGNMENTS 40% of Total
-            <select>
-              <option selected-value>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move To...</option>
-              <option>Send To...</option>
-              <option>Copy To...</option>
-              <option>Share to Commons</option>
-            </select>
-          </h2>
-          <ul>
-            <li>
-              <a href="edit.html">A1 - ENV + HTML</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
+        <div class="col">
+          <ol class="breadcrumb wd-breadcrumb flex-nowrap">
+            <li class="breadcrumb-item wd-red text-truncate">
+              <a href="../home/home.html">CS4550.12631.202410</a>
             </li>
-            <li>
-              <a href="edit.html">A2 - CSS + BOOTSTRAP</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
+            <li class="breadcrumb-item active text-truncate">
+              <a href="index.html"> Assignments </a>
             </li>
-            <li>
-              <a href="edit.html">A3 - JS + REACT</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="edit.html">A4 - STATE + REDUX</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="edit.html">A5 - NODE + SESSION</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="edit.html">A6 - MONGO + MONGOOSE</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-          </ul>
+          </ol>
         </div>
-        <div>
-          <h2>
-            QUIZZES 10% of Total
-            <select>
-              <option selected-value>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move To...</option>
-              <option>Send To...</option>
-              <option>Copy To...</option>
-              <option>Share to Commons</option>
-            </select>
-          </h2>
-          <ul>
-            <li>
-              <a href="#">Q1 - HTML</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q2 - CSS</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q3 - JS,ES6</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q4 - NODE</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Q5 - MONGO</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-          </ul>
+        <div class="col-auto">
+          <button class="btn btn-secondary">
+            <i class="fa-solid fa-glasses"></i> Student View
+          </button>
         </div>
-        <div>
-          <h2>
-            EXAMS 20% of Total
-            <select>
-              <option selected-value>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move To...</option>
-              <option>Send To...</option>
-              <option>Copy To...</option>
-              <option>Share to Commons</option>
-            </select>
-          </h2>
-          <ul>
-            <li>
-              <a href="#">Midterm</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-            <li>
-              <a href="#">Final</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-          </ul>
-          <h2>
-            PROJECT 30% of Total
-            <select>
-              <option selected-value>Edit</option>
-              <option>Speed Grader</option>
-              <option>Duplicate</option>
-              <option>Delete</option>
-              <option>Move To...</option>
-              <option>Send To...</option>
-              <option>Copy To...</option>
-              <option>Share to Commons</option>
-            </select>
-          </h2>
-          <ul>
-            <li>
-              <a href="#">Project</a><br />
-              <a href="#">Multiple Modules</a> | Not available yet
-            </li>
-          </ul>
+      </div>
+      <hr />
+      <div class="container-fluid p-0">
+        <div class="row flex-nowrap p-0">
+          <div class="col-auto">
+            <div class="wd-navigation-subbar">
+              <div style="padding-left: 16px">
+                <h6 class="wd-truncate-ellipsis">
+                  202410_1 Fall 2023 Semester Full Term
+                </h6>
+              </div>
+              <ul class="wd-navigation-subbar-list">
+                <li>
+                  <a href="../home/home.html">Home</a>
+                </li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li class="wd-navigation-subbar-list-selected">
+                  <a href="index.html">Assignments</a>
+                </li>
+                <li><a href="#">Quizzes</a></li>
+                <li>
+                  <a href="../grades/grades.html">Grades</a>
+                </li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li>
+                  <a href="#">
+                    <span class="float-end"
+                      ><i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Discussions
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end"
+                      ><i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i> </span
+                    >Announcements
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end"
+                      ><i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Page
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Files
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Rubrics
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Outcomes
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Collaborations
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Syllabus
+                  </a>
+                </li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group text-nowrap">
+              <span class="float-end">
+                <button class="btn btn-secondary">
+                  <i class="fas fa-plus"></i>Group
+                </button>
+                <button class="btn btn-primary">
+                  <i class="fas fa-plus"></i> Module
+                </button>
+                <button class="btn btn-secondary">
+                  <i class="fas fa-ellipsis-v" style="font-size: 1.5rem"></i>
+                </button>
+              </span>
+              <input
+                display="inline"
+                id="search-assignment"
+                class="form-control w-25"
+                placeholder="Search For Assignments"
+              />
+            </div>
+            <hr />
+            <div class="wd-list">
+              <ul class="list-group">
+                <li
+                  class="list-group-item list-group-item-secondary"
+                  style="border-color: transparent"
+                >
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                    </div>
+                    <div class="col">
+                      <span class="text-black"><h5>Assignments</h5></span>
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <span class="wd-pill px-2"> 40% of Total</span>
+                      <i class="fas fa-plus px-2"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                      <!-- <select>
+                      <option selected-value>Edit</option>
+                      <option>Speed Grader</option>
+                      <option>Duplicate</option>
+                      <option>Delete</option>
+                      <option>Move To...</option>
+                      <option>Send To...</option>
+                      <option>Copy To...</option>
+                      <option>Share to Commons</option>
+                    </select> -->
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <a href="edit.html"><h5>A1 - ENV + HTML</h5></a>
+                      <a href="#">Week 0</a> | Due Sep 18 at 11:59pm | 100
+                      points
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <a href="edit.html"><h5>A2 - CSS + BOOTSTRAP</h5></a>
+                      <a href="#">Week 1</a> | Due Sep 25 at 11:59pm | 100
+                      points
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <a href="edit.html"><h5>A3 - JS + REACT</h5></a>
+                      <a href="#">Week 2</a> | Due Oct 2 at 11:59pm | 100 points
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <a href="edit.html"><h5>A4 - STATE + REDUX</h5></a>
+                      <a href="#">Week 3</a> | Due Oct 10 at 11:59pm | 100
+                      points
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <a href="edit.html"><h5>A5 - NODE + SESSION</h5></a>
+                      <a href="#">Week 4</a> | Due Oct 16 at 11:59pm | 100
+                      points
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <a href="edit.html"><h5>A6 - MONGO + MONGOOSE</h5></a>
+                      <a href="#">Week 5</a> | Due Oct 23 at 11:59pm | 100
+                      points
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="wd-list">
+              <ul class="list-group">
+                <li
+                  class="list-group-item list-group-item-secondary"
+                  style="border-color: transparent"
+                >
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                    </div>
+                    <div class="col">
+                      <h5><span class="text-black">Quizzes</span></h5>
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <span class="wd-pill px-2">10% of Total</span>
+                      <i class="fas fa-plus px-2"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Q1 - HTML</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Q2 - CSS</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Q3 - JS,ES6</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Q4 - NODE</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Q5 - MONGO</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="wd-list">
+              <ul class="list-group">
+                <li
+                  class="list-group-item list-group-item-secondary"
+                  style="border-color: transparent"
+                >
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                    </div>
+                    <div class="col">
+                      <h5><span class="text-black">Exams</span></h5>
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <span class="wd-pill px-2"> 20% of Total</span>
+                      <i class="fas fa-plus px-2"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Midterm</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Final</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="wd-list">
+              <ul class="list-group">
+                <li
+                  class="list-group-item list-group-item-secondary"
+                  style="border-color: transparent"
+                >
+                  <div class="row flex-nowrap">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                    </div>
+                    <div class="col">
+                      <h5><span class="text-black">Project</span></h5>
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <span class="wd-pill px-2"> 30% of Total</span>
+                      <i class="fas fa-plus px-2"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fa fa-grip-vertical pe-3"></i>
+                      <i
+                        class="fa-regular fa-pen-to-square"
+                        style="color: green"
+                      ></i>
+                    </div>
+                    <div class="col">
+                      <h5><a href="#">Project</a></h5>
+                      <a href="#">Multiple Modules</a> | Not available yet
+                    </div>
+                    <div class="col-auto wd-align-items-center">
+                      <i class="fas fa-check-circle" style="color: green"></i>
+                      <i class="fas fa-ellipsis-v px-2"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      </div>
+    </div>
+  </div>
+</div>

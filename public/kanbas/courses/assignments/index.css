@@ -1,0 +1,35 @@
+.wd-list {
+  font-weight: 500;
+  margin-bottom: 36px;
+}
+.wd-list li {
+  border-left: 4px solid green;
+}
+.wd-list h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.wd-edit-section h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+.wd-edit-section-form-label {
+  width: 200px;
+  padding-top: 0.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: end;
+  padding-right: 0;
+}
+.wd-edit-section-form {
+  padding: 12px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+}
+.wd-edit-section-form h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}

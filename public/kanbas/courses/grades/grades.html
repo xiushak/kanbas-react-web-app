@@ -1,114 +1,339 @@
-<table width="100%">
-  <tbody>
-    <tr valign="top">
-      <td>
-        <ul>
-          <li><a href="../../account/index.html">Account</a></li>
-          <li><a href="../../index.html">Dashboard</a></li>
-          <li><a href="../index.html">Courses</a></li>
-          <li><a href="#">Calendar</a></li>
-          <li><a href="#">Inbox</a></li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Studio</a></li>
-          <li><a href="#">Commons</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><a href="../home/home.html">Home</a></li>
-          <li><a href="#">Modules</a></li>
-          <li><a href="#">Piazza</a></li>
-          <li><a href="#">Zoom Meetings</a></li>
-          <li><a href="../assignments/index.html">Assignments</a></li>
-          <li><a href="#">Quizzes</a></li>
-          <li><a href="grades.html">Grades</a></li>
-          <li><a href="#">People</a></li>
-          <li><a href="#">Panopto Video</a></li>
-          <li><a href="#">Discussions</a></li>
-          <li><a href="#">Announcements</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Files</a></li>
-          <li><a href="#">Rubrics</a></li>
-          <li><a href="#">Outcomes</a></li>
-          <li><a href="#">Collaborations</a></li>
-          <li><a href="#">Syllabus</a></li>
-          <li><a href="#">Settings</a></li>
-        </ul>
-      </td>
-      <td>
-        <div>
-          <select id="gradebook">
-            <option selected value="GRADEBOOK">Gradebook</option>
-          </select>
-          <button>Import</button>
-          <select id="export">
-            <option selected value="EXPORT">Export</option>
-          </select>
-          <button>Configure</button>
+<head>
+  <!-- bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- fontawesome -->
+  <link
+    href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+    rel="stylesheet"
+  />
+  <link href="../../index.css" rel="stylesheet" />
+  <link href="index.css" rel="stylesheet" />
+</head>
+<div class="wd-screen">
+  <div class="col-auto wd-navigation-sidebar-container p-0">
+    <div class="wd-navigation-sidebar">
+      <ul class="wd-navigation-sidebar-list text-white">
+        <li>
+          <img src="../../../images/NU_logo.png" width="100%" />
+        </li>
+        <li>
+          <a href="../../account/profile/index.html">
+            <i
+              class="fa-regular fa-user-circle"
+              style="font-size: 2rem; color: grey"
+            ></i>
+            <p>Account</p>
+          </a>
+        </li>
+        <li>
+          <a href="../../dashboard/index.html">
+            <i class="fa-solid fa-gauge"></i>
+            <p>Dashboard</p></a
+          >
+        </li>
+        <li class="wd-navigation-sidebar-list-selected">
+          <a href="../home/home.html">
+            <i class="fa-solid fa-book"></i>
+            <p>Courses</p></a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-calendar-days"></i>
+            <p>Calendar</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-inbox"></i>
+            <p>Inbox</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-clock"></i>
+            <p>History</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-desktop"></i>
+            <p>Studio</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <p>Commons</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-circle-question"></i>
+            <p>Help</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="margin: 24px">
+    <div style="padding-left: 10px; --bs-breadcrumb-divider: '>'">
+      <div class="row flex-nowrap">
+        <div class="col-auto">
+          <i
+            class="fa-solid fa-bars fa-xl wd-red"
+            style="line-height: 3rem"
+          ></i>
         </div>
-        <div>
-          <h3>Student Names</h3>
-          <input id="search-student" placeholder="Search Students" />
+        <div class="col">
+          <ol class="breadcrumb wd-breadcrumb flex-nowrap">
+            <li class="breadcrumb-item wd-red text-truncate">
+              <a href="../home/home.html">CS4550.12631.202410</a>
+            </li>
+            <li class="breadcrumb-item active text-truncate">
+              <a href="grades.html"> Grades </a>
+            </li>
+          </ol>
         </div>
-        <div>
-          <h3>Assignment Names</h3>
-          <input id="search-assignment" placeholder="Search Assignments" />
+      </div>
+      <hr />
+      <div class="container-fluid p-0">
+        <div class="row flex-nowrap p-0">
+          <div class="col-auto">
+            <div class="wd-navigation-subbar">
+              <div style="padding-left: 16px">
+                <h6 class="wd-truncate-ellipsis">
+                  202410_1 Fall 2023 Semester Full Term
+                </h6>
+              </div>
+              <ul class="wd-navigation-subbar-list">
+                <li>
+                  <a href="../home/home.html">Home</a>
+                </li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li>
+                  <a href="../assignments/index.html">Assignments</a>
+                </li>
+                <li><a href="#">Quizzes</a></li>
+                <li class="wd-navigation-subbar-list-selected">
+                  <a href="grades.html">Grades</a>
+                </li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li>
+                  <a href="#">
+                    <span class="float-end"
+                      ><i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Discussions
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end"
+                      ><i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i> </span
+                    >Announcements
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end"
+                      ><i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Page
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Files
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Rubrics
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Outcomes
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Collaborations
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="float-end">
+                      <i class="fa-regular fa-eye-slash" style="color: grey">
+                      </i>
+                    </span>
+                    Syllabus
+                  </a>
+                </li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-end mb-4">
+              <button class="btn btn-secondary">
+                <i class="fa-solid fa-file-import"></i> Import
+              </button>
+              <button class="btn btn-secondary dropdown-toggle">
+                <i class="fa-solid fa-file-export"></i> Export
+              </button>
+              <button class="btn btn-secondary">
+                <i class="fa-solid fa-gear" style="font-size: 1.5rem"></i>
+              </button>
+            </div>
+            <div class="row flex-nowrap mb-2">
+              <div class="col">
+                <h4 class="text-nowrap">Student Names</h4>
+                <div class="input-group">
+                  <span
+                    class="input-group-text bg-transparent"
+                    id="basic-addon1"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></span>
+                  <input
+                    class="form-control border-start-0"
+                    id="search-student"
+                    placeholder="Search Students"
+                  />
+                  <button
+                    class="btn btn-outline-secondary dropdown-toggle"
+                    style="border-color: #ced4da"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                  ></button>
+                </div>
+              </div>
+              <div class="col">
+                <h4 class="text-nowrap">Assignment Names</h4>
+                <div class="input-group">
+                  <span
+                    class="input-group-text bg-transparent"
+                    id="basic-addon1"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></span>
+                  <input
+                    class="form-control border-start-0"
+                    id="search-assignment"
+                    placeholder="Search Assignments"
+                  />
+                  <button
+                    class="btn btn-outline-secondary dropdown-toggle"
+                    style="border-color: #ced4da"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="pb-4">
+              <button class="btn btn-secondary">
+                <i class="fa-solid fa-filter"></i>Apply Filters
+              </button>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <tbody class="text-center">
+                  <tr>
+                    <td class="text-start" width="30%">Student Name</td>
+                    <td width="17.5%">assignment 1</td>
+                    <td width="17.5%">assignment 2</td>
+                    <td width="17.5%">assignment 3</td>
+                    <td width="17.5%">assignment 4</td>
+                  </tr>
+                  <tr>
+                    <td class="text-start wd-red">
+                      <a href="#">Vinco Loosey</a>
+                    </td>
+                    <td>90</td>
+                    <td>92</td>
+                    <td>97</td>
+                    <td>86</td>
+                  </tr>
+                  <tr>
+                    <td class="text-start wd-red"><a href="#">Angular L</a></td>
+                    <td>83</td>
+                    <td>74</td>
+                    <td class="py-0">
+                      <input
+                        class="form-control text-center"
+                        type="text"
+                        id="angular-assignment-3"
+                        value="94"
+                      />
+                    </td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td class="text-start wd-red">
+                      <a href="#">Banana Chicken</a>
+                    </td>
+                    <td>30</td>
+                    <td>57</td>
+                    <td>24</td>
+                    <td>34</td>
+                  </tr>
+                  <tr>
+                    <td class="text-start wd-red">
+                      <a href="#">Joseph Aoun</a>
+                    </td>
+                    <td class="py-0">
+                      <input
+                        class="form-control text-center"
+                        type="text"
+                        id="aoun-assignment-3"
+                        value="99"
+                      />
+                    </td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+                    <td class="text-start wd-red">
+                      <a href="#">Hubrain Sanpilot</a>
+                    </td>
+                    <td>80</td>
+                    <td>86</td>
+                    <td>100</td>
+                    <td>20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-        <br />
-        <div>
-          <button>Apply Filters</button>
-        </div>
-        <br />
-        <table border="1">
-          <tbody align="middle">
-            <tr>
-              <th>Student Name</th>
-              <th>assignment 1</th>
-              <th>assignment 2</th>
-              <th>assignment 3</th>
-              <th>assignment 4</th>
-            </tr>
-            <tr>
-              <td>Vinco Loosey</td>
-              <td>90</td>
-              <td>92</td>
-              <td>97</td>
-              <td>86</td>
-            </tr>
-            <tr>
-              <td>Angular L</td>
-              <td>83</td>
-              <td>74</td>
-              <td>
-                <input
-                  size="3"
-                  type="text"
-                  id="angular-assignment-3"
-                  value="94"
-                />
-              </td>
-              <td>30</td>
-            </tr>
-            <tr>
-              <td>Banana Chicken</td>
-              <td>30</td>
-              <td>57</td>
-              <td>24</td>
-              <td>34</td>
-            </tr>
-            <tr>
-              <td>Joseph Aoun</td>
-              <td>
-                <input size="3" type="text" id="aoun-assignment-3" value="99" />
-              </td>
-              <td>100</td>
-              <td>100</td>
-              <td>100</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      </div>
+    </div>
+  </div>
+</div>

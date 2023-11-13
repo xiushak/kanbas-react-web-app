@@ -1,0 +1,22 @@
+.wd-profile-info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 36px;
+}
+.wd-profile-info h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.wd-profile-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.wd-profile-info a {
+  color: rgb(209, 0, 0);
+}
+.wd-profile-info-section {
+    margin-bottom: 24px;
+}
