@@ -41,7 +41,6 @@ function WorkingWithObjects() {
         className="form-control mb-2 w-75"
         type="number"
       />
-
       <a
         href={`${URL}/completed/${assignment.completed}`}
         className="btn btn-primary me-2 float-end"
