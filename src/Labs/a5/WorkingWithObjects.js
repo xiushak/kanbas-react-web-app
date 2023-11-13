@@ -27,6 +27,35 @@ function WorkingWithObjects() {
         className="form-control mb-2 w-75"
         type="text"
       />
+      <a
+        href={`${URL}/score/${assignment.score}`}
+        className="btn btn-primary me-2 float-end"
+      >
+        Update score
+      </a>
+      <input
+        onChange={(e) =>
+          setAssignment({ ...assignment, score: e.target.value })
+        }
+        value={assignment.score}
+        className="form-control mb-2 w-75"
+        type="number"
+      />
+
+      <a
+        href={`${URL}/completed/${assignment.completed}`}
+        className="btn btn-primary me-2 float-end"
+      >
+        Update completed
+      </a>
+      <input
+        onChange={(e) =>
+          setAssignment({ ...assignment, completed: e.target.checked })
+        }
+        value={assignment.completed}
+        className="mb-2 w-75"
+        type="checkbox"
+      />
       <h4>Retrieving Objects</h4>
       <a
         href="http://localhost:4000/a5/assignment"
