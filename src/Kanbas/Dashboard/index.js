@@ -54,17 +54,16 @@ function Dashboard({
         <h2>Published Courses ({courses.length})</h2>
         <hr />
         <div className="flex-row d-flex flex-wrap wd-card-container">
-          {courses.map((course) => (
-            <>
-              <DashboardCard
-                course={course}
-                setEditCourse={(event) => {
-                  event.preventDefault();
-                  setCourse(course);
-                }}
-                deleteCourse={deleteCourse}
-              />
-            </>
+          {courses.map((c, index) => (
+            <DashboardCard
+              key={index}
+              course={c}
+              setEditCourse={(event) => {
+                event.preventDefault();
+                setCourse(c);
+              }}
+              deleteCourse={deleteCourse}
+            />
           ))}
         </div>
       </div>

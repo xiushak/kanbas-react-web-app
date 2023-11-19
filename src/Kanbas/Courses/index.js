@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 
 import CourseHeader from "./courseHeader";
@@ -8,12 +10,27 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const URL = "http://localhost:4000/api/courses";
+  const findCourseById = async (courseId) => {
+    console.log("findCourseById", courseId);
+    try {
+      const response = await axios.get(`${URL}/${courseId}`);
+      console.log(response.data);
+      setCourse(response.data);
+    } catch (error) {
+      console.log("failed to open");
+    }
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div className="px-4 py-2 w-100">
-      <CourseHeader course={course}/>
+      <CourseHeader course={course} />
       <div className="row flex-nowrap">
         <div className="col-auto">
           <CourseNavigation />

@@ -5,8 +5,8 @@ function DashboardCard({ course, setEditCourse, deleteCourse }) {
   return (
     <div className="col-auto">
       <Link
-        key={course._id}
-        to={`/Kanbas/Courses/${course._id}`}
+        key={course._id.$oid}
+        to={`/Kanbas/Courses/${course._id.$oid}`}
         className="list-group-item"
       >
         <div className="card wd-card">
@@ -23,7 +23,7 @@ function DashboardCard({ course, setEditCourse, deleteCourse }) {
               {course.number} <br />
               {course.startDate} {course.endDate}
             </p>
-            <div class="text-end">
+            <div className="text-end">
               <span
                 className="wd-clickable-icon p-1"
                 onClick={setEditCourse}
