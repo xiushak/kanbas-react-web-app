@@ -18,18 +18,19 @@ function Kanbas() {
     startDate: "2023-09-10",
     endDate: "2023-12-15",
   });
-  const URL = "http://localhost:4000/api/courses";
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const COURSES_URL = `${API_BASE}/courses`;
   const addNewCourse = async () => {
-    const response = await axios.post(URL, course);
+    const response = await axios.post(COURSES_URL, course);
     setCourses([response.data, ...courses]);
   };
   const deleteCourse = async (courseId) => {
     console.log("deleteCourse", courseId.$oid);
-    await axios.delete(`${URL}/${courseId.$oid}`);
+    await axios.delete(`${COURSES_URL}/${courseId.$oid}`);
     setCourses(courses.filter((c) => c._id.$oid !== courseId.$oid));
   };
   const updateCourse = async () => {
-    await axios.put(`${URL}/${course._id.$oid}`, course);
+    await axios.put(`${COURSES_URL}/${course._id.$oid}`, course);
     setCourses(
       courses.map((c) => {
         if (c._id.$oid === course._id.$oid) {
@@ -40,12 +41,12 @@ function Kanbas() {
     );
   };
   const findAllCourses = async () => {
-    const response = await axios.get(URL);
+    const response = await axios.get(COURSES_URL);
     setCourses(response.data);
   };
   useEffect(() => {
     findAllCourses();
-  }, []);
+  });
 
   return (
     <Provider store={store}>

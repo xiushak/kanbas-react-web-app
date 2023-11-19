@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useRouteLoaderData } from "react-router";
 
 function WorkingWithObjects() {
   const [assignment, setAssignment] = useState({
@@ -76,17 +77,11 @@ function WorkingWithObjects() {
         type="checkbox"
       />
       <h4>Retrieving Objects</h4>
-      <a
-        href="http://localhost:4000/a5/assignment"
-        className="btn btn-primary me-2"
-      >
+      <a href={useRouteLoaderData} className="btn btn-primary me-2">
         Get Assignment
       </a>
       <h4>Retrieving Properties</h4>
-      <a
-        href="http://localhost:4000/a5/assignment/title"
-        className="btn btn-primary me-2"
-      >
+      <a href={`${URL}/title`} className="btn btn-primary me-2">
         Get Title
       </a>
     </div>
