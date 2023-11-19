@@ -1,21 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { FaRegCircleCheck, FaEllipsisVertical, FaPlus } from "react-icons/fa6";
 import ModuleItem from "./ModuleItem";
 import {
+  setModules,
   addModule,
   deleteModule,
   updateModule,
   setModule,
 } from "./modulesReducer";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleUpdateModule = async () => {
+    await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  useEffect(() => {
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)));
+  }, [courseId, dispatch]);
 
   return (
     <div className="px-2">
@@ -42,16 +65,10 @@ function ModuleList() {
             dispatch(setModule({ ...module, description: e.target.value }))
           }
         />
-        <Button
-          variant="primary"
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
-        >
+        <Button variant="primary" onClick={handleAddModule}>
           <FaPlus className="mb-1" /> Module
         </Button>
-        <Button
-          variant="secondary"
-          onClick={() => dispatch(updateModule(module))}
-        >
+        <Button variant="secondary" onClick={handleUpdateModule}>
           Update
         </Button>
         <Button variant="secondary">
@@ -67,7 +84,7 @@ function ModuleList() {
               key={index}
               module={module}
               setModule={(module) => dispatch(setModule(module))}
-              deleteModule={(id) => dispatch(deleteModule(id))}
+              deleteModule={handleDeleteModule}
             />
           </>
         ))}
