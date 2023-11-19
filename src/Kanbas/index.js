@@ -40,13 +40,13 @@ function Kanbas() {
       })
     );
   };
-  const findAllCourses = async () => {
-    const response = await axios.get(COURSES_URL);
-    setCourses(response.data);
-  };
   useEffect(() => {
+    const findAllCourses = async () => {
+      const response = await axios.get(COURSES_URL);
+      setCourses(response.data);
+    };
     findAllCourses();
-  });
+  }, [COURSES_URL]);
 
   return (
     <Provider store={store}>

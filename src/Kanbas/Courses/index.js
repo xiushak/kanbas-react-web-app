@@ -13,13 +13,12 @@ import Grades from "./Grades";
 function Courses() {
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
-  
+
   const API_BASE = process.env.REACT_APP_API_BASE;
   const URL = `${API_BASE}/courses`;
 
   useEffect(() => {
     const findCourseById = async (courseId) => {
-      console.log("findCourseById", courseId);
       try {
         const response = await axios.get(`${URL}/${courseId}`);
         console.log(response.data);
@@ -28,8 +27,9 @@ function Courses() {
         console.log("failed to open");
       }
     };
+    
     findCourseById(courseId);
-  }, [URL, courseId]);
+  }, [courseId, URL]);
 
   return (
     <div className="px-4 py-2 w-100">
