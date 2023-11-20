@@ -15,19 +15,17 @@ function Courses() {
   const [course, setCourse] = useState({});
 
   const API_BASE = process.env.REACT_APP_API_BASE;
-  const URL = `${API_BASE}/courses`;
+  const URL = `${API_BASE}/api/courses`;
 
   useEffect(() => {
     const findCourseById = async (courseId) => {
       try {
         const response = await axios.get(`${URL}/${courseId}`);
-        console.log(response.data);
         setCourse(response.data);
       } catch (error) {
         console.log("failed to open");
       }
     };
-    
     findCourseById(courseId);
   }, [courseId, URL]);
 

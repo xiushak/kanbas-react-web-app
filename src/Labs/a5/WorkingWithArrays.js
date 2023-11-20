@@ -12,12 +12,9 @@ function WorkingWithArrays() {
   const [todos, setTodos] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const API = "http://localhost:4000/a5/todos";
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API = `${API_BASE}/a5/todos`;
 
-  const fetchTodos = async () => {
-    const response = await axios.get(API);
-    setTodos(response.data);
-  };
   const postTodo = async () => {
     const response = await axios.post(API, todo);
     setTodos([...todos, response.data]);
@@ -50,8 +47,12 @@ function WorkingWithArrays() {
   };
 
   useEffect(() => {
+  const fetchTodos = async () => {
+    const response = await axios.get(API);
+    setTodos(response.data);
+  };
     fetchTodos();
-  }, []);
+  }, [API]);
 
   return (
     <div>

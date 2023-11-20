@@ -6,8 +6,8 @@ function EncodingParametersInURLs() {
   const [b, setB] = useState(23);
   const [welcome, setWelcome] = useState("not fetched");
   const [result, setResult] = useState(0);
-  const URL = "http://localhost:4000";
-  
+  const URL = process.env.REACT_APP_API_BASE;
+
   const fetchSum = async (a, b) => {
     const response = await axios.get(`${URL}/a5/add/${a}/${b}`);
     setResult(response.data);
@@ -16,17 +16,17 @@ function EncodingParametersInURLs() {
     const response = await axios.get(`${URL}/a5/subtract/${a}/${b}`);
     setResult(response.data);
   };
-  const fetchWelcome = async () => {
-    try {
-      const response = await axios.get(`${URL}/a5/welcome`);
-      setWelcome(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
   useEffect(() => {
+    const fetchWelcome = async () => {
+      try {
+        const response = await axios.get(`${URL}/a5/welcome`);
+        setWelcome(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchWelcome();
-  }, []);
+  }, [URL]);
   return (
     <div>
       <h3>Encoding Parameters In URLs</h3>

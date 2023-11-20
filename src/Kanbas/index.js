@@ -19,13 +19,12 @@ function Kanbas() {
     endDate: "2023-12-15",
   });
   const API_BASE = process.env.REACT_APP_API_BASE;
-  const COURSES_URL = `${API_BASE}/courses`;
+  const COURSES_URL = `${API_BASE}/api/courses`;
   const addNewCourse = async () => {
     const response = await axios.post(COURSES_URL, course);
     setCourses([response.data, ...courses]);
   };
   const deleteCourse = async (courseId) => {
-    console.log("deleteCourse", courseId.$oid);
     await axios.delete(`${COURSES_URL}/${courseId.$oid}`);
     setCourses(courses.filter((c) => c._id.$oid !== courseId.$oid));
   };

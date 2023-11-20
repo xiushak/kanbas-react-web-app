@@ -42,7 +42,6 @@ const assignmentSlice = createSlice({
       });
     },
     updateAssignment: (state, action) => {
-      console.log(action.payload);
       state.assignments = state.assignments.map((assignmentGroup) => {
         if (
           assignmentGroup.assignments &&
