@@ -63,6 +63,7 @@ function Account() {
             value={account.dob}
             placeholder="date of birth"
             className="form-control mb-2"
+            type="date"
             onChange={(e) => setAccount({ ...account, dob: e.target.value })}
           />
           <input
@@ -73,6 +74,7 @@ function Account() {
           />
           <select
             className="form-select mb-2"
+            value={account.role}
             onChange={(e) => setAccount({ ...account, role: e.target.value })}
           >
             <option value="USER">User</option>
