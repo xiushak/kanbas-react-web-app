@@ -24,6 +24,7 @@ function Signup() {
       <input
         value={credentials.username}
         className="form-control mb-2"
+        placeholder="username"
         onChange={(e) =>
           setCredentials({
             ...credentials,
@@ -34,6 +35,7 @@ function Signup() {
       <input
         value={credentials.password}
         className="form-control mb-2"
+        placeholder="password"
         type="password"
         onChange={(e) =>
           setCredentials({

@@ -37,12 +37,15 @@ function Account() {
           <input
             value={account.password}
             className="form-control mb-2"
+            type="password"
+            placeholder="password"
             onChange={(e) =>
               setAccount({ ...account, password: e.target.value })
             }
           />
           <input
             value={account.firstName}
+            placeholder="first name"
             className="form-control mb-2"
             onChange={(e) =>
               setAccount({ ...account, firstName: e.target.value })
@@ -50,6 +53,7 @@ function Account() {
           />
           <input
             value={account.lastName}
+            placeholder="last name"
             className="form-control mb-2"
             onChange={(e) =>
               setAccount({ ...account, lastName: e.target.value })
@@ -57,11 +61,13 @@ function Account() {
           />
           <input
             value={account.dob}
+            placeholder="date of birth"
             className="form-control mb-2"
             onChange={(e) => setAccount({ ...account, dob: e.target.value })}
           />
           <input
             value={account.email}
+            placeholder="email"
             className="form-control mb-2"
             onChange={(e) => setAccount({ ...account, email: e.target.value })}
           />

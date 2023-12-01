@@ -27,6 +27,7 @@ function Signin() {
       <input
         value={credentials.username}
         className="form-control mb-2"
+        placeholder="username"
         onChange={(e) =>
           setCredentials({ ...credentials, username: e.target.value })
         }
@@ -34,6 +35,7 @@ function Signin() {
       <input
         value={credentials.password}
         type="password"
+        placeholder="password"
         className="form-control mb-2"
         onChange={(e) =>
           setCredentials({ ...credentials, password: e.target.value })
