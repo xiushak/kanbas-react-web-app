@@ -32,7 +32,7 @@ function Account() {
   return (
     <div className="w-50">
       <h1>Account</h1>
-      {account && (
+      {account ? (
         <div>
           <input
             value={account.password}
@@ -78,10 +78,22 @@ function Account() {
           <button className="btn btn-primary w-100 mb-2" onClick={save}>
             Save
           </button>
-          <Link to="/project/admin/users" className="btn btn-warning w-100 mb-2">
-            Users
-          </Link>
-          <button className="btn btn-secondary w-100 mb-2" onClick={signout}>Signout</button>
+          {account.role === "ADMIN" && (
+            <Link
+              to="/project/admin/users"
+              className="btn btn-warning w-100 mb-2"
+            >
+              Users
+            </Link>
+          )}
+          <button className="btn btn-secondary w-100 mb-2" onClick={signout}>
+            Signout
+          </button>
+        </div>
+      ) : (
+        <div>
+          <h3>Not signed in...</h3>
+          go make an account or login
         </div>
       )}
     </div>
