@@ -9,8 +9,17 @@ function Signin() {
   });
   const navigate = useNavigate();
   const signin = async () => {
-    await client.signin(credentials);
-    navigate("/project/account");
+    try {
+      const response = await client.signin(credentials);
+      if (response === null) {
+        alert("Invalid credentials");
+        return;
+      } else {
+        navigate("/project/account");
+      }
+    } catch (err) {
+      alert("Login failed");
+    }
   };
   return (
     <div>
@@ -30,9 +39,10 @@ function Signin() {
           setCredentials({ ...credentials, password: e.target.value })
         }
       />
-      <button 
-      className="btn btn-primary w-100 mb-2"
-      onClick={signin}> Signin </button>
+      <button className="btn btn-primary w-100 mb-2" onClick={signin}>
+        {" "}
+        Signin{" "}
+      </button>
     </div>
   );
 }
